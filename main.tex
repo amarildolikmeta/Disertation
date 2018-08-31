@@ -1,0 +1,87 @@
+\documentclass[11pt]{report}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{dsfont}
+\usepackage{bm}
+\graphicspath{ {images/} }
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{braket} % needed for \Set
+\usepackage{caption}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\linespread{1.3}
+
+%%declarations
+\usepackage{xspace}                                                             
+\DeclareRobustCommand{\eg}{e.g.,\@\xspace}                                      
+\DeclareRobustCommand{\ie}{i.e.,\@\xspace}                                      
+\DeclareRobustCommand{\wrt}{w.r.t.\@\xspace}                                    
+\DeclareRobustCommand{\wp}{w.p.\@\xspace}
+\DeclareRobustCommand{\quotes}[1]{``#1''}
+\usepackage{dsfont}
+\usepackage{bm}
+\newcommand{\mathbr}[1]{\bm{\mathbf{#1}}}
+
+\usepackage{amsthm}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{ass}{Assumption}[section]
+\newtheorem{coroll}{Corollary}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+
+\usepackage[english]{babel}
+\renewcommand{\captionfont}{\small}
+\newcommand{\ev}{\displaystyle \mathop{\mathbb{E}}}
+\newcommand{\Var}{\displaystyle \mathop{\mathbb{V}\mathrm{ar}}}
+\newcommand{\Cov}{\displaystyle \mathop{\mathbb{C}\mathrm{ov}}}
+\newcommand{\Bias}{\displaystyle \mathop{\mathbb{B}\mathrm{ias}}}
+
+\pagenumbering{roman}
+\begin{document}
+\title{
+	{Thesis Title}\\
+	{\large Politecnico di Milano}\\
+	{\includegraphics{Logo-pol.jpg}}
+}
+\chapter*{Abstract}
+\input{abstract}
+\chapter*{Dedication}
+To my parents
+
+\chapter*{Acknowledgements}
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\listofalgorithms
+\chapter{Reinforcement Learning and Markov Decision Processes}
+\pagenumbering{arabic}
+\input{chapters/chapter02}
+\chapter{State of The Art in Efficient Exploration}
+\input{chapters/chapter03}
+\chapter{Particle Q Learning}
+\input{chapters/chapter04}
+\chapter{Experiments}
+\input{chapters/chapter05}
+\bibliographystyle{plain}
+\bibliography{sample}
+
+\end{document}
