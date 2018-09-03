@@ -37,25 +37,25 @@ To recap, the dynamics of MDPs are as follows. We start from an initial state $s
 \subsection{Policies}
 As we said before the goal of an agent is to maximize some sort of cumulative reward by taking actions that produce larger rewards. Generally the agent uses the history of states he has traversed ($s_0, s_1...$) to make decision on future actions as to maximize his utility function. The set of rules mapping the agents history to actions are called \emph{policies}. But because MDPs have the Markovian property, the current state ,$s_t$ is enough to determine the next action $a_t$~\cite{Sutton:1998:IRL:551283}. These kind of policies are called, not surprisingly, Markovian Policies. Moreover if the actions mapped are not dependent on the time step $t$, the policy is called stationary. In this thesis,for simplicity, when we use the term policy we will refer to Markovian Stationary Policies. More formally:
 \begin{definition}
-	A Markovian Stationary Policy $\pi$ is a function $\pi:\mathcal{S}\rightarrow \Delta(A)$ that for every state $s \in \mathcal{S}$ maps a probability distribution, $\pi(\cdot \mid s)$, over the action space $\mathcal{A}$. If the policy is deterministic then $\pi:\mathcal{S}\rightarrow A$
+	A Markovian Stationary Policy $\pi$ is a function $\pi:\mathcal{S}\rightarrow \Delta(A)$ that for every state $s \in \mathcal{S}$ maps a probability distribution, $\pi(\cdot \mid s)$, over the action space $\mathcal{A}$. If the policy is deterministic then $\pi:\mathcal{S}\rightarrow A$.
 \end{definition}
 The goal of reinforcement learning becomes finding the policy that maximizes the cumulative reward collected.
 An MDP paired with a policy $\pi$ induces what in literature is called a \emph{Markov Reward Process} denoted by the tuple $\mathcal{(S,P^\pi,R^\pi,\gamma,\mu)}$. For all states $s \in \mathcal{S}$, $\mathcal{P^\pi}(\cdot \mid s)$ is a probability measure over $\mathcal{S}$. $P^\pi$ is the probability density function obtained by marginalizing the transition model of the MDP, $\mathcal{P}$ over the actions:
 \begin{equation}
-	P^\pi(s'|s)=\sum_{a \in \mathcal{A}} \pi(a|s)P(s'|s,a) \qquad \forall s,s' \in \mathcal{S}
+	P^\pi(s'|s)=\sum_{a \in \mathcal{A}} \pi(a|s)P(s'|s,a), \qquad \forall s,s' \in \mathcal{S}.
 \end{equation}
 $P^\pi(s'|s)$ gives the probability of ending up in state s', starting from state s, in one time step. Similarly,$\mathcal{R^\pi}(\cdot|s,s′)$ for all $s,s′\in \mathcal{S}$ is a probability measure over $\mathbb{R}$ with the corresponding density function $R$ obtained from the reward model of the MDP as:
 \begin{equation}
-	R^\pi(r|s,s')=\sum_{a \in \mathcal{A}} \pi(a|s)\mathcal{R}(r|s,s',a) \qquad \forall s,s' \in \mathcal{S}
+	R^\pi(r|s,s')=\sum_{a \in \mathcal{A}} \pi(a|s)\mathcal{R}(r|s,s',a), \qquad \forall s,s' \in \mathcal{S}.
 \end{equation}
 MRPs are a suitable model for uncontrolled processes. The notion of action disappears and they can be used to model stochastic processes taking place in the environment and producing rewards. By further removing the concept of reward from the MRPs, as mentioned before we are left with Markov Chains or Markov Processes.
 \subsection{Utility Functions and Value Functions}
 Given a policy $\pi$, played by an agent in an MDP, it is possible to define the utility of each state. While the reward signal measures the immediate payoff the agent experiences, the utility function of a state measures the reward in a long run. The utility function is calculated over trajectories, and measures how ``good'' that trajectory is to the agents. Typically the utility is a sum (possibly discounted) of the rewards collected during the trajectory , even though there are other types of utility functions defined in literature~\cite{Puterman:1994:MDP:528623}. \par
 If $\tau$ is a trajectory the agent followed under policy $\pi$,starting form the initial state distribution $\mu$, the expected discounted sum of rewards is defined as:
 \begin{equation}
-		J^{\pi}=E_{\tau \sim p(\cdot |\mu,\pi,\mathcal{P})}\left[ \sum_{t=0}^{T(\tau)} R(s_{\tau,t},a_{\tau,t})\right]
+		J^{\pi}=E_{\tau \sim p(\cdot |\mu,\pi,\mathcal{P})}\left[ \sum_{t=0}^{T(\tau)} R(s_{\tau,t},a_{\tau,t})\right],
 \end{equation}
-where :
+where:
 \begin{itemize}
 \item $T(\tau)$ is the length of trajectory $\tau$;
 \item $s_{\tau,t}$ is the state where the agent is in the t-th time step of trajectory $\tau$;
@@ -74,7 +74,7 @@ A better way is to use the value function of each state, defined as :
 \begin{definition}
 The value function in state $s, V^\pi(s)$, of an MDP is the expected return starting from state $s$ and following policy $\pi$~\cite{Sutton:1998:IRL:551283}.
 \begin{equation}
-			V^\pi(s)=E_\pi \left[v_t| s_t=s \right] \qquad\qquad \forall s \in \mathcal{S},
+			V^\pi(s)=E_\pi \left[v_t| s_t=s \right], \qquad\qquad \forall s \in \mathcal{S},
 \end{equation}
 \end{definition}
 where $v_t= \sum_{t=0}^{T(\tau)} \gamma^{t}(s_{\tau,t},a_{\tau,t})$. The problem of finding the optimal policy becomes finding the optimal value function, and determining the optimal behavior from it.\par
@@ -82,16 +82,16 @@ For control purposes, it is easier to compute the action-value function, $Q^\pi(
 \begin{definition}
 	The action-value function in state $s$ executing action a, $Q^{\pi}(s,a)$, of an MDP is the expected return starting from state $s$, applying action a and then following policy $\pi$ ~\cite{Sutton:1998:IRL:551283}
     \begin{equation}
-			Q^\pi(s,a)=E_\pi \left[v_t| s_t=s,a_t=a \right] \qquad \qquad  \forall (s,a) \in \mathcal{S}\times \mathcal{A}.
+			Q^\pi(s,a)=E_\pi \left[v_t| s_t=s,a_t=a \right], \qquad \qquad  \forall (s,a) \in \mathcal{S}\times \mathcal{A}.
 	\end{equation}
 \end{definition}
 There is a clear relationship between the value function and the state value function. The former is computed by averaging the latter over the possible actions:
 \begin{equation}
-	V^\pi(s)=E_{a \sim \pi(\cdot|s)}\left[Q^\pi(s,a)\right] \qquad\qquad \forall s \in \mathcal{S}.
+	V^\pi(s)=E_{a \sim \pi(\cdot|s)}\left[Q^\pi(s,a)\right], \qquad\qquad \forall s \in \mathcal{S}.
 \end{equation}
 Sometimes it is useful to estimate the \emph{advantage function}, $A^\pi(s,a)$ ~\cite{LeemonCBaird93}~\cite{SchulmanMLJA15}, which represents how much a given action, $a$, is convenient in state $s$, \wrt, the average utility of that state. $A^\pi(s,a)$ is defined as:
 \begin{equation}
-		A^\pi(s,a)=Q^\pi(s,a)-V^\pi(s) \qquad \qquad \forall (s,a)\in \mathcal{S} \times \mathcal{A}.
+		A^\pi(s,a)=Q^\pi(s,a)-V^\pi(s), \qquad \qquad \forall (s,a)\in \mathcal{S} \times \mathcal{A}.
 \end{equation}
 \subsection{Bellman Equations and Operators}
 We defined the state value function, $V^\pi(s)$, as the expected return collected stating from state $s$, and then following policy $\pi$. We can decompose this definition further by considering the value function as the sum of the immediate reward in state $s$ with the expected discounted reward in the following state. This kind of recursive definition will show itself useful in solving MDPs.
@@ -124,19 +124,19 @@ which yields the solution:
 While this is an exact solution of the MDP , unfortunately inverting the matrix $\left(I-\gamma P^\pi \right)$ has a high computational complexity.\par
 A way to solve the MDP while avoiding the complexity of the matrix inversion is to use the \emph{Bellman  Operator}~\cite{Bellman:DynamicProgramming} defined as $\mathcal{T}^\pi :\mathbb{R}^{(|S|)} \rightarrow \mathbb{R}^{(|S|)}$ :
 \begin{equation}
-(T^\pi V)(s)=\sum_{a \in A} \pi(a|s)\left(R(s,a)+ \gamma \sum_{s'\in S} P(s'|s,a) V(s')\right) \qquad \forall s \in \mathcal{S}/
+(T^\pi V)(s)=\sum_{a \in A} \pi(a|s)\left(R(s,a)+ \gamma \sum_{s'\in S} P(s'|s,a) V(s')\right), \qquad \forall s \in \mathcal{S}.
 \end{equation}
 
 The Bellman Operator maps value functions to value function.It can be proved ~\cite{Puterman:1994:MDP:528623} that the state value function $V^\pi$ is the unique fixed point of the Bellman operator, $T^\pi$ , \ie it satisfies $T^\pi[V^\pi] = V^\pi $ (Bellman Expectation Equation).\par
 We can define the Bellman Expectation Operator for the Q function as well ,$T^\pi : R^{S \times A} \rightarrow
 R^{S \times A}$ , defined as:
 \begin{equation}
-(T^\pi Q^\pi)(s,a)=R(s,a)+ \gamma \sum_{s'\in S} P(s'|s,a) \sum_{a'\in A} \pi(a'|s') Q^\pi(s',a')  \qquad \forall (s,a) \in \mathcal{S} \times \mathcal{A}
+(T^\pi Q^\pi)(s,a)=R(s,a)+ \gamma \sum_{s'\in S} P(s'|s,a) \sum_{a'\in A} \pi(a'|s') Q^\pi(s',a'),  \qquad \forall (s,a) \in \mathcal{S} \times \mathcal{A}.
 \end{equation}
 Like for the value function, $Q^\pi$ is the unique fixed point of $T^\pi$ , \ie $T^\pi[Q^\pi] = Q^\pi$.It is worth to notice that both operators are linear. Furthermore, they satisfy the contraction property in $\mathcal{L}_\infty$ norm, \ie $ \| T^\pi f_1 − T^\pi f_2 \| _{\infty} \leq \gamma \| f_1 − f_2 \| _{\infty}$ , thus the repeated application of $T^\pi$ makes any function converge to the value function.
 Value functions are very important in reinforcement learning. They define a partial order over policies. Namely for any two policies $\pi, \pi'$:
 \begin{equation*}
-	\pi \geq \pi'\quad if \quad V^\pi(s) \geq V^{\pi'}(s) \qquad \forall s \in \mathcal{S}
+	\pi \geq \pi'\quad if \quad V^\pi(s) \geq V^{\pi'}(s), \qquad \forall s \in \mathcal{S}.
 \end{equation*}
 \subsection{Optimality Conditions}
 The standard approach to finding the \emph{optimal policy} of an MDP, \ie the policy that maximizes the agents utility function. is by means of the \emph{optimal value function}. The optimal value function maximizes the expected return for every state.\par
@@ -144,14 +144,14 @@ We will start by defining the optimal value function. If we call $\Pi$ the set o
 \begin{definition}
 	Given an MDP $\mathcal{M}$, the optimal value function in any state $s \in S$ is given by :
 \begin{equation}
-	V^*(s)=\max_{\pi \in \Pi} V^\pi(s) \qquad \qquad \forall s \in \mathcal{S}
+	V^*(s)=\max_{\pi \in \Pi} V^\pi(s), \qquad \qquad \forall s \in \mathcal{S}.
 \end{equation}
 \end{definition}
 The optimal value function specifies the best possible performance an agent can reach in any state of the MDP. Solving an MDP means finding the optimal value function.Similarly we can define the optimal action-value function, $Q^*(s,a)$ as :
 \begin{definition}
 	Given an MDP $\mathcal{M}$, the optimal action-value function in any state-action pair $(s,a) \in S \times A$ is given by :
 \begin{equation}
-	Q^*(s,a)=\max_{\pi \in \Pi} Q^\pi(s,a) \qquad \qquad \forall (s,a) \in \mathcal{S} \times \mathcal{A}
+	Q^*(s,a)=\max_{\pi \in \Pi} Q^\pi(s,a), \qquad \qquad \forall (s,a) \in \mathcal{S} \times \mathcal{A}.
 \end{equation}
 \end{definition}
 
@@ -160,33 +160,33 @@ Similarly with the value function of a given policy, we can define the optimal v
 \begin{equation}
 	\begin{split}
 	V^*(s) &=\max_{a \in A}Q^*(s,a)\\
-    &=\max_{a \in A}\left( R(s,a)+ \gamma \sum_{s' \in S} P(s'|s,a) V^*(s') \right)
+    &=\max_{a \in A}\left( R(s,a)+ \gamma \sum_{s' \in S} P(s'|s,a) V^*(s') \right).
 	\end{split}
 \end{equation}
 
 \begin{definition}
 The Bellman optimality operator, $T^*: \mathbb{R}^{|S|} \rightarrow \mathbb{R}^{|S|}$ is defined as:
 \begin{equation}
-	(T^*V)(s) =\max_{a \in A}\left( R(s,a)+ \gamma \sum_{s' \in S} P(s'|s,a) V(s') \right) \qquad \forall s \in \mathcal{S}.
+	(T^*V)(s) =\max_{a \in A}\left( R(s,a)+ \gamma \sum_{s' \in S} P(s'|s,a) V(s') \right), \qquad \forall s \in \mathcal{S}.
 	\label{eq:bellman_optimality}
 \end{equation}
 \end{definition}
 As before a similar definition follows for the action-value
  optimality operator.This operator has the same properties as the Bellman Expectation Operator mentioned before, namely its a contraction \wrt $\|\cdot\|_\infty$, and the optimal value function $V^*$ is a unique fixed point of the operator.
  \subsubsection{Optimal Policies}
- Having defined the optimal value function and it is meaning, the question becomes is there any policy,$\pi^*$ whose corresponding value function coincides with the optimal value function? It can be shown~\cite{Sutton:1998:IRL:551283} that:
+ Having defined the optimal value function and it is meaning, the question becomes is there any policy,$\pi^*$ whose corresponding value function coincides with the optimal value function? The following result has been shown in~\cite{Sutton:1998:IRL:551283}:
 \begin{theorem}
 For any Markov Decision Process 
 \begin{itemize}
-\item There exists an optimal policy $\pi^*$ that is better than or equal to all other policies $\pi \in \Pi$ 
-\item All optimal policies achieve the optimal value function, $V^{\pi*}(s)=V^*(s)$
-\item All optimal policies achieve the optimal action-value function, $Q^{\pi*}(s,a)=Q^*(s,a)$
-\item There is always a deterministic optimal policy for any MDP
+\item There exists an optimal policy $\pi^*$ that is better than or equal to all other policies $\pi \in \Pi$; 
+\item All optimal policies achieve the optimal value function, $V^{\pi*}(s)=V^*(s)$;
+\item All optimal policies achieve the optimal action-value function, $Q^{\pi*}(s,a)=Q^*(s,a)$;
+\item There is always a deterministic optimal policy for any MDP.
 \end{itemize}
 \end{theorem}
 The last result is extremely important. As a result of the theorem above we can find the optimal policy of an MDP  by finding the optimal Q function, $Q^*$, and taking the  ``greedy'' action in each state.More formally :
 \begin{equation}
-			\pi^*(s)= \argmax_{a\in A}Q^*(s,a)	\qquad \qquad \forall s \in \mathcal{S}		
+			\pi^*(s)= \argmax_{a\in A}Q^*(s,a),	\qquad \qquad \forall s \in \mathcal{S}.		
 \end{equation}
 It is worth noting that the knowledge of the optimal action value function $Q^*$ is sufficient to compute an optimal policy in a model-free manner,while the optimal value function $V^*$ requires the knowledge of the transition model $\mathcal{P}$. Model-free RL algorithms aim to estimate $Q^*$ from trajectories.
 \section{Planning in MDPs} \label{planning_mdps}
@@ -213,13 +213,13 @@ Policy Iteration solves MDPs by alternating the \emph{policy evaluation} and \em
 The algorithm starts from a random policy, $\pi_0$, as shown in Figure ~\ref{fig:policy_iteration}. The policy iteration phase tried to extract the value function of the current policy. This can be done in various ways, mentioned in the previous section. The closed form solution could be used to get an exact solution(~\ref{eq:mdp_closed_form_solution}), but as we said before this comes with a high computational cost. Alternatively, we can apply recursively the Bellman Expectation Operator, which, as mentioned before, is a contraction in the max norm. By applying recursively this operator we get an approximation of the real value function of the policy, but for most applications look for an approximation of the value function. In fact in \emph{modified policy iteration}~\cite{Puterman:1978:MPI:2828482.2828486} the algorithm does not wait until convergence, advocating that a sufficiently good approximation is enough.\par
 After the policy evaluation phase, policy improvement generates the greedy policy from the value function, by selecting, in each state, the action that maximizes it.
 \begin{equation}
-	\pi^{t+1}(s)=\argmax_{a \in \mathcal{A}} Q^{\pi^t}(s,a) \qquad \qquad s \in \mathcal{S}
+	\pi^{t+1}(s)=\argmax_{a \in \mathcal{A}} Q^{\pi^t}(s,a), \qquad \qquad s \in \mathcal{S}.
 \end{equation}
 The policy generated is deterministic , and moreover it is guaranteed to be an improvement over the previous one.
 \begin{theorem}
 (Policy Improvement Theorem) Given an MDP $\mathcal{M}$ and two deterministic policies $\pi$ and $\pi′$ :
 \begin{equation*}
-	Q^\pi(s,\pi'(s)) \geq V^\pi(s) \qquad \forall s \in \mathcal{S} \qquad \Rightarrow \qquad V^{\pi'}(s) \geq V^\pi(s)	\qquad \forall s \in \mathcal{S}
+	Q^\pi(s,\pi'(s)) \geq V^\pi(s), \qquad \forall s \in \mathcal{S} \qquad \Rightarrow \qquad V^{\pi'}(s) \geq V^\pi(s),	\qquad \forall s \in \mathcal{S}.
 \end{equation*}
 \end{theorem}
 Now, of course, by evaluating the policy by means of the value function, to generate the greedy policy, we need the state transition model, $\mathcal{P}$. In other cases, when the model is not available, Q-iteration is used. Here, instead of evaluating the value function of the policy, we evaluate the action-value function in a similar way.
@@ -236,7 +236,7 @@ The main disadvantage of Dynamic Programming (when used to solve MDPs) is the fa
 \subsection{Classifying Reinforcement Learning Algorithms}
 Reinforcement Learning, being one of the Machine Learning paradigms, is a vast field containing a large number of algorithms. We can classify RL algorithms in a number of ways as:
 \begin{itemize}
-\item Model-based vs Model-free depending whether or not the algorithm needs the state transition probabilities, $\mathcal{P}$. Model-free techniques try to find the optimal policy directly from samples of trajectories, whereas model-based techniques estimate first the transition model, to then apply DP to find the optimal policy
+\item Model-based vs Model-free depending whether or not the algorithm needs the state transition probabilities, $\mathcal{P}$. Model-free techniques try to find the optimal policy directly from samples of trajectories, whereas model-based techniques estimate first the transition model, to then apply DP to find the optimal policy.
 \item On-Policy vs Off-Policy depending on whether the agent learns the same policy used to collect data. On-policy algorithms learn the value function of the policy used to collect the samples, whereas off-policy algorithms learn the value function of a second policy (typically the optimal policy) while using a different policy to collect the samples.\
 \item Online vs Offline depending on when the learning is performed. Online methods learn while collecting the samples whereas offline methods learn after they have all the data.
 \item Tabular vs Function Approximation depending on the representation of the value function. Tabular methods explicitly save the value function for each state in a table (usable only in finite MDPs), whereas function approximation algorithms use approximators (regressors, neural networks) to estimate the value function.
@@ -272,14 +272,14 @@ An option is using an $\epsilon-greedy$ policy, a stochastic policy that chooses
 Again, different algorithms differ on their estimation of the value function, $v^{*}_t$.
 MC uses the estimator $v^{MC}_{t}=\sum_{i=t}^{T(\tau)-1} \gamma^{t} r_{i+1}$, while TD as before uses $v^{TD}_t=r_{t+1}+ Q^{t}(s_{t+1},a_{t+1})$. The TD control algorithm is called SARSA ~\cite{rummery:cuedtr94}. The remarks made in the previous section about the usage of the two algorithms are valid also in the control setting. It is important to mention that both MC and TD are on-policy methods, meaning that they estimate the value function of a policy , while following it. This is important especially while bootstrapping in TD, since it determines the choice of the next action, $a_{t+1}$ that appears in the TD target. Both algorithms have convergence guarantees, as long as they follow the Robbin-Moore conditions on the learning rate, given by:
 \begin{equation}
-	\sum_{t=0}^{\infty} \alpha^{t}=+\infty \quad and \quad \sum_{t=0}^{\infty} \left(\alpha^{t}\right)^2 \leq +\infty.
+	\sum_{t=0}^{\infty} \alpha^{t}=+\infty \quad \text{and} \quad \sum_{t=0}^{\infty} \left(\alpha^{t}\right)^2 \leq +\infty.
 \end{equation}
 and  each state-action pair is visited infinitely many times ~\cite{Jaakkola:1994:CSI:1362288.1362296,Sutton:1998:IRL:551283}. A simple case that respects these conditions is $\alpha^t= \frac{1}{t}$.\par
 We will now shortly present, an off-policy algorithm, used to estimate the optimal action-value function of an unknown MDP. The famous Q-Learning ~\cite{Watkins:89} can be thought as an extension of Value Iteration to the model-free case. Basically it applies a sample based version of the Bellman Optimality Equation, allowing to learn the optimal action value function without having to actually play an optimal policy The update rule of Q learning is given as:
 \begin{equation}
 	Q^{t+1}(s_t,a_t)= Q^{t}(s_t,a_t) +\alpha^t \left(r_{t+1} + \gamma \max_{a' \in \mathcal{A}} Q^{t}(s_{t+1},a') - Q^{t}(s_t,a_t)\right).
 \end{equation}
-Pseudocode of the Q learning algorithm is shown in Alg. [~\ref{alg:q-learning}].
+Pseudocode of the Q learning algorithm is shown in Alg. \ref{alg:q-learning}.
 \begin{algorithm}[H]
 \begin{flushleft}
         \textbf{Input:} States $\mathcal{S} = \{1, \dots, n_s\}$, Actions $\mathcal{A} = \{1, \dots, n_a\}$, Reward function $R: \mathcal{S} \times \mathcal{A} \rightarrow \mathbb{R}$, Learning rate $\alpha \in [0, 1]$, Exploration rate $\epsilon \in [0, 1]$, Discount factor $\gamma \in [0, 1]$.\\
@@ -359,7 +359,7 @@ Considering a scalar $a$ and a random variable $A$, independent of $U,V$, the me
 \begin{equation*}
 \begin{split}
 		d_p(aU,aV) & \leq \vert a \vert d_p{U,V}, \\
-		d_p(A+U,A+V) &  \leq d_p(U,V) \\,
+		d_p(A+U,A+V) &  \leq d_p(U,V), \\
 		d_p(AU,AV) & \leq \Vert A \Vert d_p(U,V).
 \end{split}
 \end{equation*}
@@ -376,8 +376,8 @@ We emphasize that $Z^\pi$ describes the intrinsic randomness of the agent's inte
 The randomness in the return of the next state can also be expressed in the transition operator $P^\pi: \mathcal{Z \rightarrow Z}$, defined as:
 \begin{equation}
 \begin{aligned}
-	P^\pi Z(s,a) \,{\buildrel D \over =}\ Z(S',A') \\
-	S' \sim P(\cdot |s,a) \quad A' \sim \pi(S'),
+	P^\pi Z(s,a) \,{\buildrel D \over =}\ Z(S',A'), \\
+	S' \sim P(\cdot |s,a), \quad A' \sim \pi(S'),
 \end{aligned}
 \end{equation} 
 where $\,{\buildrel D \over =}\ $ is an equality in distribution. We use the capital letters $S'$ and $A'$ to emphasize the random nature of the next state-action pair. Now we can give the definition of the distributional Bellman operator, $\mathcal{T}^\pi Z \rightarrow Z$, as 
@@ -400,7 +400,7 @@ In  this  context,  the  Wasserstein metric is particularly interesting because 
 In the previous section we discussed how the Bellman distributional operator has the same properties as the expectation one. This does not hold in the control setting unfortunately, with the optimality operator. As a reminder, in the control setting we seek a policy $\pi$ that maximizes the value function and the corresponding notion of an optimal value distribution. We will see how optimality is a trickier concept when seen in a distributional setting.Just like with the value function, the notion of optimal value distribution is tied with the notion of an optimal policy. But if with value functions , all optimal policies have the same optimal value function , this is not the case with value distributions. \par
 The notion of optimal policy does not change. The optimal policy is still the policy that maximizes the expected return. Having the definition of the optimal policy , we can define the optimal value distribution as :
 \begin{definition}
-	An optimal value distribution is the value distribution of an optimal policy. The set of optimal value distributions is  $\mathcal{Z^*} := \left\lbrace \mathcal{Z^{\pi^*}} : \pi^* \in \Pi^* \right\rbrace$
+	An optimal value distribution is the value distribution of an optimal policy. The set of optimal value distributions is  $\mathcal{Z^*} := \left\lbrace \mathcal{Z^{\pi^*}} : \pi^* \in \Pi^* \right\rbrace$.
 \end{definition}
 We emphasize that not all value distributions with expectation $Q^\pi$ are optimal. They must match the full distribution  of the return under some optimal policy.\par
 Recall that the expected Bellman optimality operator $\mathcal{T}$. In (~\ref{eq:bellman_optimality}) the maximum over actions corresponds to an implicit greedy policy, which cannot be ignored in the distributional case. So let us give the definition of a greedy policy as provided by ~\cite{DBLP:journals/corr/BellemareDM17}.
@@ -412,7 +412,7 @@ Recall that the expected Bellman optimality operator $\mathcal{T}$. In (~\ref{eq
 \end{definition}
 After defining the notion of a greedy policy we can define a distributional optimality operator as any operator $\mathcal{T}$ which implements a greedy selection rule, \ie
 \begin{equation}
-	\mathcal{T}Z=\mathcal{T}^\pi Z \quad for \quad some \quad \pi \in \mathcal{G}_{Z}.
+	\mathcal{T}Z=\mathcal{T}^\pi Z \quad \text{for some} \quad \pi \in \mathcal{G}_{Z}.
 \end{equation}
  As in the policy evaluation setting, we are interested in the behavior of the iterates $Z_{k+1}= \mathcal{T}Z_k$ where $Z_0 \in \mathcal{Z}$. Bellemare ~\cite{DBLP:journals/corr/BellemareDM17} shows that the expectation, $\mathbb{E}Z$ behaves as expected, converging to $Q^*$ exponentially quickly. Unfortunately, convergence of $Z_k$ to $Z^*$ is neither quick nor assured to reach a fixed point. In Bellemare derives 3 negatives results concerning the operator $\mathcal{T}$:
  \begin{itemize}

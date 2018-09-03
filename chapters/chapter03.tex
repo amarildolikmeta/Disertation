@@ -9,7 +9,7 @@ Before reviewing the state of the art in exploration, it is important to discuss
 Sample complexity defined as the time required by the algorithm to find an approximately optimal policy ~\cite{Gatsby2003OnTS}. More formally:
 \begin{itemize}
  \item Let $\mathcal{M}$ be an MDP with N states, K actions, discount factor $\gamma$ and a maximal reward $R_{max}$ >0;
- \item Let A be an algorithm that acts in the environment producing experience $s_0,a_0,r_1,s_1,a_1,r_2 \ldots$;
+ \item Let A be an algorithm that acts in the environment producing experience $s_0$, $a_0$, $r_1$, $s_1$, $a_1$, $r_2$ $\ldots$;
  \item Let $V^{A}_t=\mathbb{E} \left[ \sum_{\tau =0}^{\infty} \gamma^\tau r_{t+\tau} \mid s_0,a_0,r_1 \ldots s_{t-1},a_{t-1},r_t,s_t \right]$ be the value accumulated by A;
  \item Let $V^*$ be the value function of the optimal policy;
 \end{itemize}
@@ -18,7 +18,7 @@ Sample complexity defined as the time required by the algorithm to find an appro
 \end{definition}
 Now that we have a measure of the efficiency of RL algorithms, we can give the definition of \emph{PAC-MDPs}, a class of algorithms which includes some of the algorithms we will discuss further.
 \begin{definition}
-An algorithm with sample complexity that is polynomial in $\frac{1}{\epsilon}, \log\frac{1}{\delta}, N, K, \frac{1}{1-\gamma}, R_{max}$ is called PAC-MDP (probably approximately correct in MDPs).
+An algorithm with sample complexity that is polynomial in $\frac{1}{\epsilon}$, $\log\frac{1}{\delta}$, $N$, $K$, $\frac{1}{1-\gamma}$, $R_{max}$ is called PAC-MDP (probably approximately correct in MDPs).
 \end{definition}
 \subsubsection{Regret}
 Regret is defined as the difference between the cumulative reward of the optimal policy and that gathered by the policy $\pi$ played by the agent hence is usually used with on-policy algorithms. More formally, the total regret of policy $\pi$ after $T$ steps, $R^{\pi}(T)$ is defined as:
@@ -35,7 +35,7 @@ The main ideas of $E^3$ are as follows :
 	\item Known states have been visited sufficiently many times to guarantee that the transition probabilities $P(s,a,s')$ and rewards $R(s,a,s')$ are accurate with high probabilities for every tuple $(s,a,s') \in S \times A \times S$,
 	\item Unknown states are moved to the known set, $N$, when they are visited at least $m$ times, for some number $m$.
 \end{itemize}
-By separating the state space in two subsets, $E^3$ defines two different MDPs. The first MDP, $MDP_{known}$, includes the states in the set N and the calculated values for the transition probabilities and Reward function. This MDP is used for exploitation. The second MDP, $MDP_{unknown}$, has the same structure as the first one with the addition of a special state $s'$ which includes all the unknown states and the reward for reaching it is maximal, for every action $a \in A$. Pseudocode of the $E^3$ algorithm is shown in Alg. [~\ref{alg:e3}]
+By separating the state space in two subsets, $E^3$ defines two different MDPs. The first MDP, $MDP_{known}$, includes the states in the set N and the calculated values for the transition probabilities and Reward function. This MDP is used for exploitation. The second MDP, $MDP_{unknown}$, has the same structure as the first one with the addition of a special state $s'$ which includes all the unknown states and the reward for reaching it is maximal, for every action $a \in A$. Pseudocode of the $E^3$ algorithm is shown in Alg.~\ref{alg:e3}
 \begin{algorithm}[H]
 \begin{flushleft}
  \textbf{Input:} $s$ - Current state\\
@@ -69,7 +69,7 @@ parameters, both rewards and transitions, are associated with joint actions of a
 In R-max, the agent will always attempt to optimize its behavior, albeit with respect to a fictitious model. Roughly speaking, this model assumes that the reward the agent obtains in any situation it is not too familiar with is its maximal possible reward, denoted by $R_{max}$. Often, optimal behavior with respect to this fictitious
 model results in exploration with respect to the real model, and thus, to learning. The
 major insight behind the R-max algorithm is that the optimal policy with respect to the agent’s fictitious model has a very interesting and useful property with respect to the real model: it is always either optimal or it leads to efficient learning. In many situations, the agent will not know ahead of time whether its behavior will lead to optimizing behavior with respect to the real model or to learning – this depends on how the adversary will act. However, it knows that it will either optimize or learn efficiently.\par
-The approach taken by R-max is not new. It has been referred to as the optimism in the face of uncertainty heuristic, and was considered an ad-hoc, though useful, approach ~\cite{KLMSurvey,Sutton:1998:IRL:551283}. The approach has been extensively studies in the framework of multi armed bandits ~\cite{journals/corr/abs-1204-5721}. This optimistic bias has also been used in a number of well-known reinforcement learning algorithms, e.g. Kaelbling’s interval exploration method ~\cite{kaelbling1993learning}, the exploration bonus in Dyna ~\cite{DBLP:journals/sigart/Sutton91} etc. However, none of this work provides theoretical justification for this very natural bias. Brafman and Tennenholtz ~\cite{Brafman:2003:RGP:944919.944928} provide a formal justification for the optimism under uncertainty bias, used in their R-max algorithm.\par
+The approach taken by R-max is not new. It has been referred to as the optimism in the face of uncertainty heuristic, and was considered an ad-hoc, though useful, approach ~\cite{KLMSurvey,Sutton:1998:IRL:551283}. The approach has been extensively studied in the framework of multi armed bandits ~\cite{journals/corr/abs-1204-5721}. This optimistic bias has also been used in a number of well-known reinforcement learning algorithms, e.g. Kaelbling’s interval exploration method ~\cite{kaelbling1993learning}, the exploration bonus in Dyna ~\cite{DBLP:journals/sigart/Sutton91} etc. However, none of this work provides theoretical justification for this very natural bias. Brafman and Tennenholtz ~\cite{Brafman:2003:RGP:944919.944928} provide a formal justification for the optimism under uncertainty bias, used in their R-max algorithm.\par
 The algorithm is quite simple. Model $\mathcal{M}'$ is constructed, containing the set of $N+1$ games $\mathcal{S}= \lbrace G_0,G_1,\ldots,G_N \rbrace$, where $G_0$ is an initial fictitious game, and the set of $k$ actions $\mathcal{A}= \lbrace a_1,\ldots,a_K \rbrace$. The reward matrices are initialized to have ($R_{max},0$) in all entries whereas the transition model is initialized $P_M(G_i,G_0,a,a′)$ = 1 for all i=$0,\ldots,N$ and for all actions $a,a′$. In addition, for each game, we maintain some additional information:
 \begin{itemize}
 \item a boolean value depicting whether the state is \emph{known} or \emph{unknown}, initiliazed to unknown;
@@ -81,7 +81,7 @@ The algorithm assumes knowledge of the maximum reward, $R_{max}$, and the $\epsi
 \begin{itemize}
 \item If the joint action ($a,a'$) is performed for the first time in $G_i$, update the reward associated with ($a,a'$) in $G_i$, as observed;
 \item Update the set of states reached by playing ($a,a′$) in $G_i$ ;
-\item If at this point your record of states reached from this entry contains $K_1=\max \left( \lceil (\frac{4NTR_{max}}{\epsilon})^3 \rceil,\lceil -6 \ln^3(\frac{\delta}{6Nk^2}) \rceil \right) +1$ elements, mark this entry as known and update the transition probabilities for this entry according to the observed frequencies.
+\item If at this point your record of states reached from this entry contains \\ $K_1=\max \left( \lceil (\frac{4NTR_{max}}{\epsilon})^3 \rceil,\lceil -6 \ln^3(\frac{\delta}{6Nk^2}) \rceil \right) +1$ elements, mark this entry as known and update the transition probabilities for this entry according to the observed frequencies.
 \end{itemize}
 R-max starts with an initial estimate for the model parameters that assumes all states and all joint actions yield maximal reward and lead with probability 1 to the fictitious stage-game $G_0$. Based on the current model, an optimal $T$-step policy is computed and followed. Following each joint action the agent arrives at a new stage-game, and this transition is recorded in the appropriate place. Once we have enough information about where some joint action leads to from some stage-game, we update the entries associated with this stage-game and this joint action in our model. After each model update, we recompute an optimal policy and repeat the above steps.\par
 Like $E^3$, R-max is a model based approach, meaning that it maintains a model of the environment and uses the samples of experience to estimate the model parameters and uses the latter to plan in the environment. Unlike $E^3$, exploration is done implicitly due to the initialization of the reward matrices at R-max, meaning that unknown states will explored since the model gives high reward for them. Another point in common is the efficiency of the algorithm. R-max is also PAC-MDP, meaning that the number of samples needed to find the optimal policy scales polynomially with respect to the number of states, which again wields a exponential complexity with respect to the state variables.
@@ -109,10 +109,10 @@ of plausible MDPs. UCRL then chooses an optimal policy $\pi_t$ for an MDP $M_{t}
 where $\mu_{\pi^*}$ is the stationary distribution induced by $\pi^*$ in $M$.\par
 UCRL includes in the set $\mathcal{M}_t$ those MDPs $M'$ whose transition probabilities $p'(\cdot,\cdot,\cdot)$, and rewards $r'(\cdot,\cdot)$ satisfy for all states $s,s'$ and actions $a$:
 \begin{equation}
-		r'(s,a)\leq \hat{r}_t(s,a) +\sqrt{\frac{\log(2t^\alpha |S| |A|)}{2N_t(s,a)}}, \qquad and
+		r'(s,a)\leq \hat{r}_t(s,a) +\sqrt{\frac{\log(2t^\alpha |S| |A|)}{2N_t(s,a)}},
 \end{equation}
 \begin{equation}
-		|p'(s,a,s')- \hat{p}_t(s,a,s') \leq \sqrt{\frac{\log(4t^\alpha |S|^2 |A|)}{2N_t(s,a)}},
+		|p'(s,a,s')- \hat{p}_t(s,a,s')| \leq \sqrt{\frac{\log(4t^\alpha |S|^2 |A|)}{2N_t(s,a)}},
 \end{equation}
 for some $\alpha>2$. The intuition behind the algorithm is that if a non-optimal policy is followed, then this is eventually observed and something about the MDP is learned. Auer and Ortner ~\cite{NIPS2006_3052} show that this learning happens sufficiently fast to approach an optimal policy with only logarithmic regret. As switching policies too often may be harmful, and estimates do not change very much after few steps, UCRL discards the policy $\pi_t$ only if there was considerable progress concerning the estimates of the transition model or reward. That is, UCRL sticks to a policy until the length of some of the confidence intervals given before is halved. Only then a new policy is calculated.
 
@@ -142,7 +142,7 @@ In the Bayesian framework, we need to consider \emph{prior} distributions over Q
 \begin{itemize}
 	\item $R_{s,a}$ has a normal distribution. By making these assumption we are able to model the uncertainty over the distribution by modeling a distribution over the mean $\mu_{s,a}$ and \emph{precision}, $\tau_{s,a}$.
 	\item The prior distribution over $\mu_{s,a}$ and $\tau_{s,a}$ is independent from the prior distribution over $\mu_{s',a'}$ and $\tau_{s',a'}$ for $s \neq s'$ or $a \neq a'$.
-	\item The prior $p(\mu_{s,a},\tau_{s,a})$ is a \emph{normal-gamma} distribution ~\cite{degroot2012probability}, determined by a tuple of hyperparameters, $\rho=(\mu_0,\lambda,\alpha,\beta)$. The choice of the normal-gamma distribution to represent the normal distribution of $R_{s,a}$ with unknown mean $\mu_{s,a}$ and precision $\tau_{s,a}$, is important because standard results ~\cite{degroot2012probability} show that the posterior of a normal-gamma distribution is again a normal-gamma distribution. This mean that to represent the agent's prior over the distribution of $R_{s,a}$ we need only to maintain the tuple $\rho_{s,a}=(\mu_0^{s,a},\lambda^{s,a},\alpha^{s,a},\beta^{s,a})$ for all $(s,a) \in S \times A$.
+	\item The prior $p(\mu_{s,a},\tau_{s,a})$ is a \emph{normal-gamma} distribution ~\cite{degroot2012probability}, determined by a tuple of hyperparameters, $\rho=(\mu_0,\lambda,\alpha,\beta)$. The choice of the normal-gamma distribution to represent the normal distribution of $R_{s,a}$ with unknown mean $\mu_{s,a}$ and precision $\tau_{s,a}$, is important because standard results ~\cite{degroot2012probability} show that the posterior of a normal-gamma distribution is again a normal-gamma distribution. This mean that to represent the agent's prior over the distribution of $R_{s,a}$ we need only to maintain the tuple $\rho_{s,a}=(\mu_0^{s,a},\lambda^{s,a},\alpha^{s,a},\beta^{s,a})$ for all $(s,a) \in \mathcal{S \times A}$.
 	\item At any stage, the agent's posterior over $\mu_{s,a}$ and $\tau_{s,a}$ is independent from the posterior distribution over $\mu_{s',a'}$ and $\tau_{s',a'}$ for $s \neq s'$ or $a \neq a'$.
 \end{itemize} 
 \subsubsection{Action Selection}
@@ -178,7 +178,7 @@ Using (~\ref{eq:moment_updating}) and standard results for normal-gamma distribu
 \begin{split}
 	& \mu_{0_{s,a}}'=\frac{\lambda_{s,a} \mu_{0_{s,a}} + M_1}{\lambda_{s,a}+1}, \\
 	& \lambda_{s,a}'=\lambda_{s,a}+1, \\
-	& \alpha_{s,a}'=\alpha_{s,a}+ \frac{1}{2} \\
+	& \alpha_{s,a}'=\alpha_{s,a}+ \frac{1}{2}, \\
 	& \beta_{s,a}'=\beta_{s,a}+\frac{1}{2}(M_2-M_1^2)+ \frac{\lambda_{s,a}(M_1-\mu_{0_{s,a}})^2}{2(\lambda_{s,a}+1)}.
 \end{split}
 \end{equation}
@@ -225,7 +225,7 @@ Periodically, the replay buffer is played back to update the parameters of the v
 \begin{equation}
 g_t^k=m_t^k(y_t^Q-Q_k(s_t,a_t;\theta))\nabla_{\theta}Q(s_t,a_t;\theta),
 \end{equation}
-where $y_t^Q$ is the target value given by (~\ref{eq:double_DQN_target}). Pseudocode of the algorithm is shown in Alg. ~\ref{alg:bootstrapped_dqn}.
+where $y_t^Q$ is the target value given by (~\ref{eq:double_DQN_target}). Pseudocode of the algorithm is shown in Alg.~\ref{alg:bootstrapped_dqn}.
 \begin{algorithm}[H]
 	\textbf{INPUT:} Value function networks $Q$ with $K$ outputs $\lbrace Q_k \rbrace_{k=1}^{K}$, Masking distribution $M$.
  \begin{algorithmic} 
@@ -256,7 +256,7 @@ This discrete distribution is highly expressive and computationally friendly ~\c
 The algorithm works as follows:
 \begin{itemize}
 	\item From $(s,a)$, sample a transition, $r, S', A' \sim R(s,a), P(\cdot|s,a), \pi(\cdot|S')$, where $\pi$ the policy the agent follows;
-	\item Compute the \emph{sample backup} given as :
+	\item Compute the \emph{sample backup} given as:
 	\begin{equation}
 	\hat{\mathcal{T}}^\pi Z(s,a)=r+\gamma Z(S',A');
 	\end{equation}
