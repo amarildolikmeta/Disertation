@@ -20,6 +20,9 @@
 \usepackage{caption}
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
+\usepackage{float}
+\usepackage{subcaption}
+
 \linespread{1.3}
 
 %%declarations
@@ -55,16 +58,16 @@
 \pagenumbering{roman}
 \begin{document}
 \title{
-	{Thesis Title}\\
-	{\large Politecnico di Milano}\\
-	{\includegraphics{Logo-pol.jpg}}
+	Driving Exploration Through Particle Q-Distributions
 }
+%\input{Cover}
+
 \chapter*{Abstract}
 \input{abstract}
-\chapter*{Dedication}
-To my parents
 
 \chapter*{Acknowledgements}
+\input{acknowledgements}
+
 \tableofcontents
 
 \listoffigures
@@ -85,6 +88,7 @@ To my parents
 \chapter{Experiments}		\label{chap:chapter5}
 \input{chapters/chapter05} 
 \chapter{Conclusions}		\label{chap:chapter6}
+\input{chapters/chapter06} 
 \bibliographystyle{plain}
 \bibliography{sample}
 
