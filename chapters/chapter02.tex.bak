@@ -1,7 +1,7 @@
 Reinforcement Learning (RL) is an area of machine learning, closely tied to behavioral psychology, concerned with how agents should behave in their environment as to maximize some notion of utility function. Being inspired from psychology, we can say that this area is the closer to how humans and other beings learn.  The agent has to explore  environment, collecting data on its interactions and using them to make informed decisions in the future. In a way this process is similar to a baby exploring his surroundings and playing in a playground. The process is formalized in Figure \ref{fig:rl_framework}.\par
 \begin{figure}
   \includegraphics[width=\linewidth]{RL.png}
-  \caption{The Reinforcement Learning framework ~\cite{Sutton:1998:IRL:551283}}
+  \caption{The Reinforcement Learning framework~\cite{Sutton:1998:IRL:551283}.}
   \label{fig:rl_framework}
 \end{figure}
 The main driver of the agent's behavior is the reward signal it receives from the environment.  In the baby's case, the activity of exploring the playground and playing, is driven by an intrinsic motivation of human beings to explore our surroundings and understand them better, which in this case can be seen as an internal, or intrinsic reward signal. Other examples include teaching rats how to solve a maze by giving them food if they reach the end. In this case the reward signal is external or extrinsic. In either case the reward function  specifies the task the agent has to learn. We assume that the reward is given to the agent after every action but in the most interesting and complicated cases actions might affect not only the immediate rewards but also future rewards. So the agent must have the ability to map the sensations it gets from the environment (states) to actions, keeping in mind the effects of these actions in the future. This kind of problems are best described in the Markov Decision Process (MDP) framework.\par
@@ -207,7 +207,7 @@ When the subproblems are solved also the main problem is solved. This recursive 
 Policy Iteration solves MDPs by alternating the \emph{policy evaluation} and \emph{policy improvement} phases~\cite{howard:dynamic60}.
 \begin{figure}
   \includegraphics[width=\linewidth]{policy_iteration.jpg}
-  \caption{Policy iteration algorithm (~\cite{Sutton:1998:IRL:551283}).}
+  \caption{Policy iteration algorithm~\cite{Sutton:1998:IRL:551283}.}
   \label{fig:policy_iteration}
 \end{figure}
 The algorithm starts from a random policy, $\pi_0$, as shown in Figure ~\ref{fig:policy_iteration}. The policy iteration phase tried to extract the value function of the current policy. This can be done in various ways, mentioned in the previous section. The closed form solution could be used to get an exact solution(~\ref{eq:mdp_closed_form_solution}), but as we said before this comes with a high computational cost. Alternatively, we can apply recursively the Bellman Expectation Operator, which, as mentioned before, is a contraction in the max norm. By applying recursively this operator we get an approximation of the real value function of the policy, but for most applications look for an approximation of the value function. In fact in \emph{modified policy iteration}~\cite{Puterman:1978:MPI:2828482.2828486} the algorithm does not wait until convergence, advocating that a sufficiently good approximation is enough.\par
@@ -223,7 +223,7 @@ The policy generated is deterministic , and moreover it is guaranteed to be an i
 \end{equation*}
 \end{theorem}
 Now, of course, by evaluating the policy by means of the value function, to generate the greedy policy, we need the state transition model, $\mathcal{P}$. In other cases, when the model is not available, Q-iteration is used. Here, instead of evaluating the value function of the policy, we evaluate the action-value function in a similar way.
-\subsection{ Value Iteration}
+\subsection{Value Iteration}
 Value iteration finds the optimal value function (and from it the optimal policy), without the intermediate use of policies. This method is based on the iterative application of the Bellman Optimality operation discussed in the previous section.\par
 We recall that this operator is a contraction ~\cite{Banach1922}. The algorithm start from an initial (random) value function, $V^0$, and applies iteratively the Bellman operator until a stopping condition is met. The stopping condition might be maximal number of iterations or based on some minimal metric of distance between two subsequent estimations of the value function. In the end the optimal policy is recovered in the same way as in policy iteration, by taking the greedy policy induced by the optimal value function. Again the state transition model is required, otherwise we need to estimate the optimal action-value function instead.The convergence to the optimal value function is guaranteed. In particular, given two consecutive
 approximations of the optimal value function we can bound the error \wrt the true optimal value function:
@@ -330,10 +330,10 @@ The algorithms presented so far perform updates as soon as a sample is drawn
 The common approach to RL is modeling the expected random return the agent gets, or the value function. This approach has shown really good results, like playing the game of Go in super-human levels, but it has some  problems.Consider for a moment the Atari game , Space Invaders. A frame from this game is shown in Figure ~\ref{fig:space_invaders}. In this game the agent control a laser-canon that shoots alien invaders (hence Space Invaders) as they descent the screen. While the agent shoots enemy spaceships he collects points (rewards). The goal of the game is obviously maximizing this reward. The enemy ships also shoot at the laser-canon. If all the laser-canons of the player are destroyed the game ends and the final score is the score collected so far. What is interesting about the game is that if the enemy ships reach the bottom , you lose immediately, no matter how many lives you have left. This is interesting because as the enemies approach the bottom of the screen, the probability that you lose the game increases so in these states the value distribution is quite complex, multi-modal if you will. A simple expected return does not capture this multi modality and actually gives an expectation that will not be reached in practice. Modeling the expected return of the agent actually hides the intrinsic randomness of the environment. In this section we will discuss the importance of value distributions.
 \begin{figure}
   \includegraphics[width=\linewidth]{space_invaders.jpg}
-  \caption{A frame form the video game Space Invaders }
+  \caption{A frame from the video game Space Invaders.}
   \label{fig:space_invaders}
 \end{figure}
-\subsection{Value distributions}
+\subsection{Value Distributions}
 One of the major principles of RL states that, if not not otherwise constrained in its behavior, an agent should aim to maximize its expected utility Q, or value~\cite{Sutton:1998:IRL:551283} and as discussed before this is expressed elegantly with the Bellman Operators.\par
 Bellemare et al. ~\cite{DBLP:journals/corr/BellemareDM17} argue for the fundamental importance of the value distribution:  the distribution of the random return received by a reinforcement learning  agent. There is a large body of literature on this distribution~\cite{jaquette1973}~\cite{articleSobel} , but for mainly specific purposes, such as implementing risk-aware behavior~\cite{Morimura:2010:NRD:3104322.3104424} or to model parametric uncertainty~\cite{Dearden98bayesianq-learning}. Specifically we are interested on the random return $Z$.\par
 \subsection{Distribution Distance Measures}
