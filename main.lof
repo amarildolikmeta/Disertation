@@ -1,0 +1,48 @@
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The Reinforcement Learning framework~\cite {Sutton:1998:IRL:551283}.\relax }}{6}{figure.caption.9}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Policy iteration algorithm~\cite {Sutton:1998:IRL:551283}.\relax }}{16}{figure.caption.14}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces A frame from the video game Space Invaders.\relax }}{22}{figure.caption.15}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Examples of Q-value distributions of two actions for which Q-value sampling has the same exploration policy even though the payoff of exploration in (b) is higher than in (a) ~\cite {Dearden98bayesianq-learning}.\relax }}{37}{figure.caption.25}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Network architecture in Bootstrapped DQN ~\cite {DBLP:journals/corr/OsbandBPR16}.\relax }}{40}{figure.caption.27}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Visualization of the distributional Bellman operator ~\cite {DBLP:journals/corr/BellemareDM17}.\relax }}{43}{figure.caption.29}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Behaviour of the Q-distribution over time.\relax }}{50}{figure.caption.33}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Q-distributions of 3 different actions.\relax }}{55}{figure.caption.34}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Target Q-distributions of state $s'$.\relax }}{59}{figure.caption.35}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Chain domain taken from ~\cite {Dearden98bayesianq-learning}.\relax }}{63}{figure.caption.36}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Online (left) and offline (right) scores in the Chain domain.\relax }}{64}{figure.caption.37}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Evolution of the particles in the first state of the Chain domain during the learning process for the Particle Q-learning algorithm with weighted policy and weighted update (a), and VPI policy and maximum mean update (b). The optimal action \emph {a} is shown on the left, while the suboptimal action \emph {b} is shown on the right on both (a) and (b).\relax }}{65}{figure.caption.38}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Standard deviation of the particles as a function of the learning timestep for the Particle Q-learning algorithm with weighted policy and weighted update (a), and VPI policy and maximum mean update (b). Once again, the optimal action \emph {a} is shown on the left, while the suboptimal action \emph {b} is shown on the right on both (a) and (b).\relax }}{66}{figure.caption.39}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Probability of exploration as a function of the learning timestep for the Particle Q-learning algorithm with weighted policy and weighted update in the Chain domain.\relax }}{67}{figure.caption.40}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Loop domain taken from ~\cite {Dearden98bayesianq-learning}.\relax }}{68}{figure.caption.41}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Online and offline scores in the Loop domain.\relax }}{68}{figure.caption.42}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Evolution of the particles in the first state of the Loop domain during the learning process for the Particle Q-learning algorithm with weighted policy and weighted update (a), and VPI policy and maximum mean update (b). The optimal action \emph {b} is shown on the right, while the suboptimal action is shown on the left on both (a) and (b).\relax }}{70}{figure.caption.43}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Standard deviation of the particles as a function of the learning timestep for the Particle Q-learning algorithm with weighted policy and weighted update (a), and VPI policy and maximum mean update (b) in the Loop domain. The optimal action is shown on the right, while the suboptimal action is shown on the left on both (a) and (b).\relax }}{71}{figure.caption.44}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Probability of exploration as a function of the learning timestep for the Particle Q-learning algorithm with weighted policy and weighted update in the Loop domain.\relax }}{72}{figure.caption.45}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Taxi domain taken from ~\cite {Dearden98bayesianq-learning}, where it appears as the Maze domain.\relax }}{72}{figure.caption.46}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Online and offline scores in the Taxi domain.\relax }}{73}{figure.caption.47}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces River Swim domain taken from ~\cite {Strehl2008AnAO}.\relax }}{74}{figure.caption.48}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Online and offline scores in the River Swim domain.\relax }}{74}{figure.caption.49}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Evolution of the particles in the first state of the RiverSwim domain during the learning process for the Particle Q-learning algorithm with weighted policy and weighted update (a), and VPI policy and maximum mean update (b). The optimal action is shown on the right, while the suboptimal action is shown on the left on both (a) and (b).\relax }}{75}{figure.caption.50}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Standard deviation of the particles as a function of the learning timestep for the Particle Q-learning algorithm with weighted policy and weighted update (a), and VPI policy and maximum mean update (b) in the RiverSwim domain. The optimal action is shown on the right, while the suboptimal action is shown on the left on both (a) and (b).\relax }}{77}{figure.caption.51}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Probability of exploration as a function of the learning timestep for the Particle Q-learning algorithm with weighted policy and weighted update in the RiverSwim domain.\relax }}{78}{figure.caption.52}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Six Arms domain taken from ~\cite {Strehl2008AnAO}.\relax }}{78}{figure.caption.53}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Online and offline scores in the SixArms domain.\relax }}{79}{figure.caption.54}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Knight Quest domain taken from ~\cite {DBLP:conf/icml/FruitPLO18}. The green cells are the three locations the dragon can move to.\relax }}{79}{figure.caption.55}
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Online and offline scores in the KnightQuest domain.\relax }}{81}{figure.caption.56}
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Frame taken from the Breakout Atari 2600 game.\relax }}{84}{figure.caption.58}
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Evaluation scores in the Breakout Atari 2600 game.\relax }}{84}{figure.caption.59}
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Image of the first room of Montezuma's Revenge.\relax }}{85}{figure.caption.60}
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Evaluation scores in Montezuma's Revenge.\relax }}{86}{figure.caption.61}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Online (left) and offline (right) scores for the double algorithms in the Chain domain.\relax }}{95}{figure.caption.65}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Online (left) and offline (right) scores for the double algorithms in the Loop domain.\relax }}{96}{figure.caption.67}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Online (left) and offline (right) scores for the double algorithms in the Taxi domain.\relax }}{96}{figure.caption.69}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Online (left) and offline (right) scores for the double algorithms in the River Swim domain.\relax }}{97}{figure.caption.71}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Online (left) and offline (right) scores for the double algorithms in the Six Arms domain.\relax }}{97}{figure.caption.73}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Online (left) and offline (right) scores for the double algorithms in the Knight Quest domain.\relax }}{98}{figure.caption.75}

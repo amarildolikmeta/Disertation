@@ -1,0 +1,7 @@
+\contentsline {algorithm}{\numberline {1}{\ignorespaces $Q$-learning: Learn function $Q: \mathcal {S} \times \mathcal {A} \rightarrow \mathbb {R}$\relax }}{20}{algorithm.1}
+\contentsline {algorithm}{\numberline {2}{\ignorespaces $E^3$ algorithm\relax }}{30}{algorithm.2}
+\contentsline {algorithm}{\numberline {3}{\ignorespaces Bootstrapped DQN\relax }}{42}{algorithm.3}
+\contentsline {algorithm}{\numberline {4}{\ignorespaces $C51$ algorithm\relax }}{44}{algorithm.4}
+\contentsline {algorithm}{\numberline {5}{\ignorespaces $QR-DQN$ algorithm\relax }}{47}{algorithm.5}
+\contentsline {algorithm}{\numberline {6}{\ignorespaces Maximum Mean Updating\relax }}{58}{algorithm.6}
+\contentsline {algorithm}{\numberline {7}{\ignorespaces Weighted Updating\relax }}{60}{algorithm.7}

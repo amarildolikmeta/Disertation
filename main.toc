@@ -1,0 +1,92 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {subsubsection}{Goal}{3}{section*.8}
+\contentsline {section}{\numberline {1.1}Overview}{3}{section.1.1}
+\contentsline {chapter}{\numberline {2}Reinforcement Learning and Markov Decision Processes}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Markov Decision Processes}{7}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Definitions}{8}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Policies}{9}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Utility Functions and Value Functions}{10}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Bellman Equations and Operators}{12}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}Optimality Conditions}{13}{subsection.2.1.5}
+\contentsline {subsubsection}{Bellman Optimality Equation}{14}{section*.12}
+\contentsline {subsubsection}{Optimal Policies}{14}{section*.13}
+\contentsline {section}{\numberline {2.2}Planning in MDPs}{15}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Dynamic Programming}{15}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Policy Iteration}{15}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Value Iteration}{16}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Reinforcement Learning}{17}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Classifying Reinforcement Learning Algorithms}{17}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Model-free Prediction}{18}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Model-free Control}{19}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Function Approximation}{20}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Basics of Function Approximation}{21}{subsection.2.4.1}
+\contentsline {section}{\numberline {2.5}Distributional Reinforcement Learning}{22}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Value Distributions}{22}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Distribution Distance Measures}{23}{subsection.2.5.2}
+\contentsline {subsubsection}{KL Divergence}{23}{section*.16}
+\contentsline {subsubsection}{Wasserstein Metric}{23}{section*.17}
+\contentsline {subsection}{\numberline {2.5.3}Policy Evaluation Setting}{24}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}The Control Setting}{25}{subsection.2.5.4}
+\contentsline {chapter}{\numberline {3}State of The Art in Efficient Exploration}{27}{chapter.3}
+\contentsline {section}{\numberline {3.1}Exploration}{28}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Measuring Efficient Exploration}{28}{subsection.3.1.1}
+\contentsline {subsubsection}{Sample Complexity}{28}{section*.18}
+\contentsline {subsubsection}{Regret}{28}{section*.19}
+\contentsline {subsection}{\numberline {3.1.2}Explicit Explore or Exploit}{29}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}R-Max}{30}{subsection.3.1.3}
+\contentsline {subsubsection}{Stochastic Games}{30}{section*.20}
+\contentsline {subsubsection}{R-max algorithm}{31}{section*.21}
+\contentsline {subsection}{\numberline {3.1.4}Upper Confidence Reinforcement Learning}{32}{subsection.3.1.4}
+\contentsline {subsubsection}{UCRL}{32}{section*.22}
+\contentsline {subsubsection}{UCRL2}{33}{section*.23}
+\contentsline {subsection}{\numberline {3.1.5}Delayed Q Learning}{34}{subsection.3.1.5}
+\contentsline {subsection}{\numberline {3.1.6}Bayesian Q Learning}{35}{subsection.3.1.6}
+\contentsline {subsubsection}{Action Selection}{36}{section*.24}
+\contentsline {subsubsection}{Updating the Distribution}{37}{section*.26}
+\contentsline {section}{\numberline {3.2}Deep Exploration}{39}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Bootstrapped Q Learning}{39}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Distributional RL}{42}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Approximate Distributional Learning: C51}{42}{subsection.3.3.1}
+\contentsline {subsubsection}{Projection step}{43}{section*.28}
+\contentsline {subsection}{\numberline {3.3.2}Distributional Reinforcement Learning with Quantile Regression}{44}{subsection.3.3.2}
+\contentsline {subsubsection}{The Quantile Approximation}{45}{section*.30}
+\contentsline {subsubsection}{QRTD}{46}{section*.31}
+\contentsline {subsubsection}{Quantile Regression DQN}{47}{section*.32}
+\contentsline {chapter}{\numberline {4}Particle Q Learning}{48}{chapter.4}
+\contentsline {section}{\numberline {4.1}Q Value Distributions}{48}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Particle Q Distribution}{49}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Sample Mean Distribution}{50}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Approximation of a distribution function with mixture of delta functions}{51}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Wasserstein barycenter}{53}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}Action Selection}{54}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}VPI Policy}{55}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Weighted Policy}{57}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Updating the Q-distribution}{58}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Sorted Update}{58}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Maximum Mean Updating}{58}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Weighted Updating}{59}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {5}Experiments}{61}{chapter.5}
+\contentsline {section}{\numberline {5.1}Tabular Case}{61}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Evaluation Metrics}{61}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Experimental Setup}{62}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Chain Domain}{63}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Loop Domain}{67}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Taxi Domain}{69}{subsection.5.1.5}
+\contentsline {subsection}{\numberline {5.1.6}River Swim Domain }{73}{subsection.5.1.6}
+\contentsline {subsection}{\numberline {5.1.7}Six Arms Domain}{76}{subsection.5.1.7}
+\contentsline {subsection}{\numberline {5.1.8}Knight Quest}{76}{subsection.5.1.8}
+\contentsline {section}{\numberline {5.2}Atari Experiments}{81}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Experimental Setup}{82}{subsection.5.2.1}
+\contentsline {subsubsection}{Network Initialization}{83}{section*.57}
+\contentsline {subsection}{\numberline {5.2.2}Breakout}{83}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Montezuma's Revenge}{83}{subsection.5.2.3}
+\contentsline {chapter}{\numberline {6}Conclusions}{87}{chapter.6}
+\contentsline {subsubsection}{Future Work}{88}{section*.62}
+\contentsline {chapter}{\numberline {A}Experiments With Double Agents}{95}{appendix.A}
+\contentsline {subsubsection}{Chain}{95}{section*.64}
+\contentsline {subsubsection}{Loop}{96}{section*.66}
+\contentsline {subsubsection}{Taxi}{96}{section*.68}
+\contentsline {subsubsection}{River Swim}{97}{section*.70}
+\contentsline {subsubsection}{Six Arms}{97}{section*.72}
+\contentsline {subsubsection}{Knight Quest}{98}{section*.74}

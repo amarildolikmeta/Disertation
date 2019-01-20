@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: sample.bib
+Warning--empty booktitle in Gatsby2003OnTS
+Warning--empty institution in LeemonCBaird93
+Warning--empty journal in bootstrapAsymptotic
+Warning--empty journal in articleSobel
+Warning--empty institution in Thrun92efficientexploration
+Warning--empty journal in articleWyatt1997
+You've used 68 entries,
+            2118 wiz_defined-function locations,
+            948 strings with 17340 characters,
+and the built_in function-call counts, 24594 in all, are:
+= -- 2426
+> -- 1256
+< -- 20
++ -- 499
+- -- 421
+* -- 1736
+:= -- 4085
+add.period$ -- 224
+call.type$ -- 68
+change.case$ -- 396
+chr.to.int$ -- 0
+cite$ -- 74
+duplicate$ -- 947
+empty$ -- 1827
+format.name$ -- 421
+if$ -- 5175
+int.to.chr$ -- 0
+int.to.str$ -- 68
+missing$ -- 78
+newline$ -- 344
+num.names$ -- 146
+pop$ -- 411
+preamble$ -- 1
+purify$ -- 337
+quote$ -- 0
+skip$ -- 687
+stack$ -- 0
+substring$ -- 1385
+swap$ -- 229
+text.length$ -- 20
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 242
+warning$ -- 6
+while$ -- 221
+width$ -- 70
+write$ -- 774
+(There were 6 warnings)

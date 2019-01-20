@@ -1,0 +1,66 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Overview}{chapter.1}% 2
+\BOOKMARK [0][-]{chapter.2}{Reinforcement Learning and Markov Decision Processes}{}% 3
+\BOOKMARK [1][-]{section.2.1}{Markov Decision Processes}{chapter.2}% 4
+\BOOKMARK [2][-]{subsection.2.1.1}{Definitions}{section.2.1}% 5
+\BOOKMARK [2][-]{subsection.2.1.2}{Policies}{section.2.1}% 6
+\BOOKMARK [2][-]{subsection.2.1.3}{Utility Functions and Value Functions}{section.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.1.4}{Bellman Equations and Operators}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.5}{Optimality Conditions}{section.2.1}% 9
+\BOOKMARK [1][-]{section.2.2}{Planning in MDPs}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.1}{Dynamic Programming}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.2}{Policy Iteration}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.3}{Value Iteration}{section.2.2}% 13
+\BOOKMARK [1][-]{section.2.3}{Reinforcement Learning}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.3.1}{Classifying Reinforcement Learning Algorithms}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.2}{Model-free Prediction}{section.2.3}% 16
+\BOOKMARK [2][-]{subsection.2.3.3}{Model-free Control}{section.2.3}% 17
+\BOOKMARK [1][-]{section.2.4}{Function Approximation}{chapter.2}% 18
+\BOOKMARK [2][-]{subsection.2.4.1}{Basics of Function Approximation}{section.2.4}% 19
+\BOOKMARK [1][-]{section.2.5}{Distributional Reinforcement Learning}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.5.1}{Value Distributions}{section.2.5}% 21
+\BOOKMARK [2][-]{subsection.2.5.2}{Distribution Distance Measures}{section.2.5}% 22
+\BOOKMARK [2][-]{subsection.2.5.3}{Policy Evaluation Setting}{section.2.5}% 23
+\BOOKMARK [2][-]{subsection.2.5.4}{The Control Setting}{section.2.5}% 24
+\BOOKMARK [0][-]{chapter.3}{State of The Art in Efficient Exploration}{}% 25
+\BOOKMARK [1][-]{section.3.1}{Exploration}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.1.1}{Measuring Efficient Exploration}{section.3.1}% 27
+\BOOKMARK [2][-]{subsection.3.1.2}{Explicit Explore or Exploit}{section.3.1}% 28
+\BOOKMARK [2][-]{subsection.3.1.3}{R-Max}{section.3.1}% 29
+\BOOKMARK [2][-]{subsection.3.1.4}{Upper Confidence Reinforcement Learning}{section.3.1}% 30
+\BOOKMARK [2][-]{subsection.3.1.5}{Delayed Q Learning}{section.3.1}% 31
+\BOOKMARK [2][-]{subsection.3.1.6}{Bayesian Q Learning}{section.3.1}% 32
+\BOOKMARK [1][-]{section.3.2}{Deep Exploration}{chapter.3}% 33
+\BOOKMARK [2][-]{subsection.3.2.1}{Bootstrapped Q Learning}{section.3.2}% 34
+\BOOKMARK [1][-]{section.3.3}{Distributional RL}{chapter.3}% 35
+\BOOKMARK [2][-]{subsection.3.3.1}{Approximate Distributional Learning: C51}{section.3.3}% 36
+\BOOKMARK [2][-]{subsection.3.3.2}{Distributional Reinforcement Learning with Quantile Regression}{section.3.3}% 37
+\BOOKMARK [0][-]{chapter.4}{Particle Q Learning}{}% 38
+\BOOKMARK [1][-]{section.4.1}{Q Value Distributions}{chapter.4}% 39
+\BOOKMARK [2][-]{subsection.4.1.1}{Particle Q Distribution}{section.4.1}% 40
+\BOOKMARK [2][-]{subsection.4.1.2}{Sample Mean Distribution}{section.4.1}% 41
+\BOOKMARK [2][-]{subsection.4.1.3}{Approximation of a distribution function with mixture of delta functions}{section.4.1}% 42
+\BOOKMARK [2][-]{subsection.4.1.4}{Wasserstein barycenter}{section.4.1}% 43
+\BOOKMARK [1][-]{section.4.2}{Action Selection}{chapter.4}% 44
+\BOOKMARK [2][-]{subsection.4.2.1}{VPI Policy}{section.4.2}% 45
+\BOOKMARK [2][-]{subsection.4.2.2}{Weighted Policy}{section.4.2}% 46
+\BOOKMARK [1][-]{section.4.3}{Updating the Q-distribution}{chapter.4}% 47
+\BOOKMARK [2][-]{subsection.4.3.1}{Sorted Update}{section.4.3}% 48
+\BOOKMARK [2][-]{subsection.4.3.2}{Maximum Mean Updating}{section.4.3}% 49
+\BOOKMARK [2][-]{subsection.4.3.3}{Weighted Updating}{section.4.3}% 50
+\BOOKMARK [0][-]{chapter.5}{Experiments}{}% 51
+\BOOKMARK [1][-]{section.5.1}{Tabular Case}{chapter.5}% 52
+\BOOKMARK [2][-]{subsection.5.1.1}{Evaluation Metrics}{section.5.1}% 53
+\BOOKMARK [2][-]{subsection.5.1.2}{Experimental Setup}{section.5.1}% 54
+\BOOKMARK [2][-]{subsection.5.1.3}{Chain Domain}{section.5.1}% 55
+\BOOKMARK [2][-]{subsection.5.1.4}{Loop Domain}{section.5.1}% 56
+\BOOKMARK [2][-]{subsection.5.1.5}{Taxi Domain}{section.5.1}% 57
+\BOOKMARK [2][-]{subsection.5.1.6}{River Swim Domain }{section.5.1}% 58
+\BOOKMARK [2][-]{subsection.5.1.7}{Six Arms Domain}{section.5.1}% 59
+\BOOKMARK [2][-]{subsection.5.1.8}{Knight Quest}{section.5.1}% 60
+\BOOKMARK [1][-]{section.5.2}{Atari Experiments}{chapter.5}% 61
+\BOOKMARK [2][-]{subsection.5.2.1}{Experimental Setup}{section.5.2}% 62
+\BOOKMARK [2][-]{subsection.5.2.2}{Breakout}{section.5.2}% 63
+\BOOKMARK [2][-]{subsection.5.2.3}{Montezuma's Revenge}{section.5.2}% 64
+\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 65
+\BOOKMARK [0][-]{appendix.A}{Experiments With Double Agents}{}% 66

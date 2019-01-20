@@ -1,0 +1,410 @@
+\begin{thebibliography}{10}
+
+\bibitem{journals/siamma/AguehC11}
+Martial Agueh and Guillaume Carlier.
+\newblock Barycenters in the wasserstein space.
+\newblock {\em SIAM J. Math. Analysis}, 43(2):904--924, 2011.
+
+\bibitem{pmlr-v70-arjovsky17a}
+Martin Arjovsky, Soumith Chintala, and L{\'e}on Bottou.
+\newblock {W}asserstein generative adversarial networks.
+\newblock In Doina Precup and Yee~Whye Teh, editors, {\em Proceedings of the
+  34th International Conference on Machine Learning}, volume~70 of {\em
+  Proceedings of Machine Learning Research}, pages 214--223, International
+  Convention Centre, Sydney, Australia, 06--11 Aug 2017. PMLR.
+
+\bibitem{NIPS2006_3052}
+Peter Auer and Ronald Ortner.
+\newblock Logarithmic online regret bounds for undiscounted reinforcement
+  learning.
+\newblock In B.~Sch\"{o}lkopf, J.~C. Platt, and T.~Hoffman, editors, {\em
+  Advances in Neural Information Processing Systems 19}, pages 49--56. MIT
+  Press, 2007.
+
+\bibitem{Banach1922}
+Stefan Banach.
+\newblock Sur les opérations dans les ensembles abstraits et leur application
+  aux équations intégrales.
+\newblock {\em Fundamenta Mathematicae}, 3(1):133--181, 1922.
+
+\bibitem{DBLP:journals/corr/BellemareDM17}
+Marc~G. Bellemare, Will Dabney, and R{\'{e}}mi Munos.
+\newblock A distributional perspective on reinforcement learning.
+\newblock {\em CoRR}, abs/1707.06887, 2017.
+
+\bibitem{Bellemare:2013:ALE:2566972.2566979}
+Marc~G. Bellemare, Yavar Naddaf, Joel Veness, and Michael Bowling.
+\newblock The arcade learning environment: An evaluation platform for general
+  agents.
+\newblock {\em J. Artif. Int. Res.}, 47(1):253--279, May 2013.
+
+\bibitem{Bellman:DynamicProgramming}
+Richard Bellman.
+\newblock {\em {Dynamic Programming}}.
+\newblock Dover Publications, 1957.
+
+\bibitem{Blundell:2015:WUN:3045118.3045290}
+Charles Blundell, Julien Cornebise, Koray Kavukcuoglu, and Daan Wierstra.
+\newblock Weight uncertainty in neural networks.
+\newblock In {\em Proceedings of the 32Nd International Conference on
+  International Conference on Machine Learning - Volume 37}, ICML'15, pages
+  1613--1622. JMLR.org, 2015.
+
+\bibitem{Brafman:2003:RGP:944919.944928}
+Ronen~I. Brafman and Moshe Tennenholtz.
+\newblock R-max - a general polynomial time algorithm for near-optimal
+  reinforcement learning.
+\newblock {\em J. Mach. Learn. Res.}, 3:213--231, March 2003.
+
+\bibitem{journals/corr/abs-1204-5721}
+Sébastien Bubeck and Nicolò Cesa-Bianchi.
+\newblock Regret analysis of stochastic and nonstochastic multi-armed bandit
+  problems.
+\newblock {\em CoRR}, abs/1204.5721, 2012.
+
+\bibitem{BurnhamModelSelection}
+Kenneth~P. Burnham and David~R. Anderson.
+\newblock {\em {Model selection and multimodel inference: a practical
+  information-theoretic approach}}.
+\newblock Springer, 2 edition, 2002.
+
+\bibitem{DBLP:journals/corr/abs-1710-10044}
+Will Dabney, Mark Rowland, Marc~G. Bellemare, and R{\'{e}}mi Munos.
+\newblock Distributional reinforcement learning with quantile regression.
+\newblock {\em CoRR}, abs/1710.10044, 2017.
+
+\bibitem{Dearden98bayesianq-learning}
+Richard Dearden, Nir Friedman, and Stuart Russell.
+\newblock Bayesian q-learning.
+\newblock In {\em In AAAI/IAAI}, pages 761--768. AAAI Press, 1998.
+
+\bibitem{degroot2012probability}
+M.H. DeGroot and M.J. Schervish.
+\newblock {\em Probability and Statistics}.
+\newblock Addison-Wesley, 2012.
+
+\bibitem{pmlr-v48-deramo16}
+Carlo D’Eramo, Marcello Restelli, and Alessandro Nuara.
+\newblock Estimating maximum expected value through gaussian approximation.
+\newblock In Maria~Florina Balcan and Kilian~Q. Weinberger, editors, {\em
+  Proceedings of The 33rd International Conference on Machine Learning},
+  volume~48 of {\em Proceedings of Machine Learning Research}, pages
+  1032--1040, New York, New York, USA, 20--22 Jun 2016. PMLR.
+
+\bibitem{EfroTibs93}
+Bradley Efron and Robert~J. Tibshirani.
+\newblock {\em An Introduction to the Bootstrap}.
+\newblock Number~57 in Monographs on Statistics and Applied Probability.
+  Chapman \& Hall/CRC, Boca Raton, Florida, USA, 1993.
+
+\bibitem{DBLP:conf/icml/FruitPLO18}
+Ronan Fruit, Matteo Pirotta, Alessandro Lazaric, and Ronald Ortner.
+\newblock Efficient bias-span-constrained exploration-exploitation in
+  reinforcement learning.
+\newblock In {\em {ICML}}, volume~80 of {\em {JMLR} Workshop and Conference
+  Proceedings}, pages 1573--1581. JMLR.org, 2018.
+
+\bibitem{Gal:2016:DBA:3045390.3045502}
+Yarin Gal and Zoubin Ghahramani.
+\newblock Dropout as a bayesian approximation: Representing model uncertainty
+  in deep learning.
+\newblock In {\em Proceedings of the 33rd International Conference on
+  International Conference on Machine Learning - Volume 48}, ICML'16, pages
+  1050--1059. JMLR.org, 2016.
+
+\bibitem{Gatsby2003OnTS}
+Machandranath~Kakade Gatsby.
+\newblock On the sample complexity of reinforcement learning sham.
+\newblock 2003.
+
+\bibitem{Goodfellow-et-al-2016}
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+\newblock {\em Deep Learning}.
+\newblock MIT Press, 2016.
+\newblock \url{http://www.deeplearningbook.org}.
+
+\bibitem{Hasselt:2016:DRL:3016100.3016191}
+Hado~van Hasselt, Arthur Guez, and David Silver.
+\newblock Deep reinforcement learning with double q-learning.
+\newblock In {\em Proceedings of the Thirtieth AAAI Conference on Artificial
+  Intelligence}, AAAI'16, pages 2094--2100. AAAI Press, 2016.
+
+\bibitem{hastie01statisticallearning}
+Trevor Hastie, Robert Tibshirani, and Jerome Friedman.
+\newblock {\em The Elements of Statistical Learning}.
+\newblock Springer Series in Statistics. Springer New York Inc., New York, NY,
+  USA, 2001.
+
+\bibitem{hastie_09_elements-of.statistical-learning}
+Trevor Hastie, Robert Tibshirani, and Jerome Friedman.
+\newblock {\em The elements of statistical learning: data mining, inference and
+  prediction}.
+\newblock Springer, 2 edition, 2009.
+
+\bibitem{4082064}
+R.~A. Howard.
+\newblock Information value theory.
+\newblock {\em IEEE Transactions on Systems Science and Cybernetics},
+  2(1):22--26, Aug 1966.
+
+\bibitem{howard:dynamic60}
+Ronald~A. Howard.
+\newblock {\em Dynamic Programming and {M}arkov Processes}.
+\newblock MIT Press, Cambridge, MA, 1960.
+
+\bibitem{huber:1964}
+Peter~J. Huber.
+\newblock Robust estimation of a location parameter.
+\newblock {\em Annals of Mathematical Statistics}, 35(1):73--101, March 1964.
+
+\bibitem{LeemonCBaird93}
+Leemon C.~Baird III.
+\newblock Advantage updating. technical report.
+\newblock Technical report, 1993.
+
+\bibitem{bootstrapAsymptotic}
+Peter J.~Bickel and David A.~Freedman.
+\newblock Some asymptotic theory for the bootstrap.
+\newblock 9, 11 1981.
+
+\bibitem{Jaakkola:1994:CSI:1362288.1362296}
+Tommi Jaakkola, Michael~I. Jordan, and Satinder~P. Singh.
+\newblock On the convergence of stochastic iterative dynamic programming
+  algorithms.
+\newblock {\em Neural Comput.}, 6(6):1185--1201, November 1994.
+
+\bibitem{Jaksch:2010:NRB:1756006.1859902}
+Thomas Jaksch, Ronald Ortner, and Peter Auer.
+\newblock Near-optimal regret bounds for reinforcement learning.
+\newblock {\em J. Mach. Learn. Res.}, 11:1563--1600, August 2010.
+
+\bibitem{jaquette1973}
+Stratton~C. Jaquette.
+\newblock Markov decision processes with a new optimality criterion: Discrete
+  time.
+\newblock {\em Ann. Statist.}, 1(3):496--505, 05 1973.
+
+\bibitem{KLMSurvey}
+Leslie~Pack Kaelbling, Michael~L. Littman, and Andrew~P. Moore.
+\newblock Reinforcement learning: A survey.
+\newblock {\em Journal of Artificial Intelligence Research}, 4:237--285, 1996.
+
+\bibitem{kaelbling1993learning}
+L.P. Kaelbling.
+\newblock {\em Learning in Embedded Systems}.
+\newblock A Bradford book. MIT Press, 1993.
+
+\bibitem{Kearns:2002:NRL:599616.599699}
+Michael Kearns and Satinder Singh.
+\newblock Near-optimal reinforcement learning in polynomial time.
+\newblock {\em Mach. Learn.}, 49(2-3):209--232, November 2002.
+
+\bibitem{koenker2005quantile}
+R.~Koenker.
+\newblock {\em Quantile Regression}.
+\newblock Econometric Society Monographs. Cambridge University Press, 2005.
+
+\bibitem{Kullback59}
+Solomon Kullback.
+\newblock {\em Information Theory and Statistics}.
+\newblock Wiley, New York, 1959.
+
+\bibitem{NIPS2017_7149}
+Anton Mallasto and Aasa Feragen.
+\newblock Learning from uncertain curves: The 2-wasserstein metric for gaussian
+  processes.
+\newblock In I.~Guyon, U.~V. Luxburg, S.~Bengio, H.~Wallach, R.~Fergus,
+  S.~Vishwanathan, and R.~Garnett, editors, {\em Advances in Neural Information
+  Processing Systems 30}, pages 5660--5670. Curran Associates, Inc., 2017.
+
+\bibitem{DBLP:journals/corr/abs-1301-6718}
+Yishay Mansour and Satinder~P. Singh.
+\newblock On the complexity of policy iteration.
+\newblock {\em CoRR}, abs/1301.6718, 2013.
+
+\bibitem{doi:10.2200/S00426ED1V01Y201206AIM017}
+Mausam and Andrey Kolobov.
+\newblock Planning with markov decision processes: An ai perspective.
+\newblock {\em Synthesis Lectures on Artificial Intelligence and Machine
+  Learning}, 6(1):1--210, 2012.
+
+\bibitem{mnih2015humanlevel}
+Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Andrei~A. Rusu, Joel Veness,
+  Marc~G. Bellemare, Alex Graves, Martin Riedmiller, Andreas~K. Fidjeland,
+  Georg Ostrovski, Stig Petersen, Charles Beattie, Amir Sadik, Ioannis
+  Antonoglou, Helen King, Dharshan Kumaran, Daan Wierstra, Shane Legg, and
+  Demis Hassabis.
+\newblock Human-level control through deep reinforcement learning.
+\newblock {\em Nature}, 518(7540):529--533, February 2015.
+
+\bibitem{Morimura:2010:NRD:3104322.3104424}
+Tetsuro Morimura, Masashi Sugiyama, Hisashi Kashima, Hirotaka Hachiya, and
+  Toshiyuki Tanaka.
+\newblock Nonparametric return distribution approximation for reinforcement
+  learning.
+\newblock In {\em Proceedings of the 27th International Conference on
+  International Conference on Machine Learning}, ICML'10, pages 799--806, USA,
+  2010. Omnipress.
+
+\bibitem{DBLP:journals/corr/OsbandBPR16}
+Ian Osband, Charles Blundell, Alexander Pritzel, and Benjamin~Van Roy.
+\newblock Deep exploration via bootstrapped {DQN}.
+\newblock {\em CoRR}, abs/1602.04621, 2016.
+
+\bibitem{DBLP:journals/corr/OsbandR15}
+Ian Osband and Benjamin~Van Roy.
+\newblock Bootstrapped thompson sampling and deep exploration.
+\newblock {\em CoRR}, abs/1507.00300, 2015.
+
+\bibitem{Osband2017WhyIP}
+Ian Osband and Benjamin~Van Roy.
+\newblock Why is posterior sampling better than optimism for reinforcement
+  learning.
+\newblock In {\em ICML}, 2017.
+
+\bibitem{NIPS2013_5185}
+Ian Osband, Daniel Russo, and Benjamin Van~Roy.
+\newblock (more) efficient reinforcement learning via posterior sampling.
+\newblock In C.~J.~C. Burges, L.~Bottou, M.~Welling, Z.~Ghahramani, and K.~Q.
+  Weinberger, editors, {\em Advances in Neural Information Processing Systems
+  26}, pages 3003--3011. Curran Associates, Inc., 2013.
+
+\bibitem{Osband2017DeepEV}
+Ian Osband, Daniel Russo, Zheng Wen, and Benjamin~Van Roy.
+\newblock Deep exploration via randomized value functions.
+\newblock {\em CoRR}, abs/1703.07608, 2017.
+
+\bibitem{Osband:2016:GEV:3045390.3045641}
+Ian Osband, Benjamin Van~Roy, and Zheng Wen.
+\newblock Generalization and exploration via randomized value functions.
+\newblock In {\em Proceedings of the 33rd International Conference on
+  International Conference on Machine Learning - Volume 48}, ICML'16, pages
+  2377--2386. JMLR.org, 2016.
+
+\bibitem{owen2012}
+Art~B. Owen and Dean Eckles.
+\newblock Bootstrapping data arrays of arbitrary order.
+\newblock {\em Ann. Appl. Stat.}, 6(3):895--927, 09 2012.
+
+\bibitem{Puterman:1994:MDP:528623}
+Martin~L. Puterman.
+\newblock {\em Markov Decision Processes: Discrete Stochastic Dynamic
+  Programming}.
+\newblock John Wiley \& Sons, Inc., New York, NY, USA, 1st edition, 1994.
+
+\bibitem{Puterman:1978:MPI:2828482.2828486}
+Martin~L. Puterman and Moon~Chirl Shin.
+\newblock Modified policy iteration algorithms for discounted markov decision
+  problems.
+\newblock {\em Manage. Sci.}, 24(11):1127--1137, July 1978.
+
+\bibitem{rummery:cuedtr94}
+G.~A. Rummery and M.~Niranjan.
+\newblock On-line {Q}-learning using connectionist systems.
+\newblock Technical Report TR 166, Cambridge University Engineering Department,
+  Cambridge, England, 1994.
+
+\bibitem{Russell:1991:RTS:110787}
+Stuart Russell and Eric Wefald.
+\newblock {\em Do the Right Thing: Studies in Limited Rationality}.
+\newblock MIT Press, Cambridge, MA, USA, 1991.
+
+\bibitem{SchulmanMLJA15}
+John Schulman, Philipp Moritz, Sergey Levine, Michael~I. Jordan, and Pieter
+  Abbeel.
+\newblock High-dimensional continuous control using generalized advantage
+  estimation.
+\newblock {\em CoRR}, abs/1506.02438, 2015.
+
+\bibitem{Silver_2016}
+David Silver, Aja Huang, Chris~J. Maddison, Arthur Guez, Laurent Sifre, George
+  van~den Driessche, Julian Schrittwieser, Ioannis Antonoglou, Veda
+  Panneershelvam, Marc Lanctot, Sander Dieleman, Dominik Grewe, John Nham, Nal
+  Kalchbrenner, Ilya Sutskever, Timothy Lillicrap, Madeleine Leach, Koray
+  Kavukcuoglu, Thore Graepel, and Demis Hassabis.
+\newblock Mastering the game of {Go} with deep neural networks and tree search.
+\newblock {\em Nature}, 529(7587):484--489, January 2016.
+
+\bibitem{silver2017mastering}
+David Silver, Julian Schrittwieser, Karen Simonyan, Ioannis Antonoglou, Aja
+  Huang, Arthur Guez, Thomas Hubert, Lucas Baker, Matthew Lai, Adrian Bolton,
+  Yutian Chen, Timothy Lillicrap, Fan Hui, Laurent Sifre, George van~den
+  Driessche, Thore Graepel, and Demis Hassabis.
+\newblock Mastering the game of go without human knowledge.
+\newblock {\em Nature}, 550:354--, October 2017.
+
+\bibitem{articleSobel}
+Matthew Sobel.
+\newblock The variance of discounted markov decision processes.
+\newblock 19:794--802, 12 1982.
+
+\bibitem{Steele:2004:CMC:993490}
+J.~Michael Steele.
+\newblock {\em The Cauchy-Schwarz Master Class: An Introduction to the Art of
+  Mathematical Inequalities}.
+\newblock Cambridge University Press, New York, NY, USA, 2004.
+
+\bibitem{Strehl:2006:PMR:1143844.1143955}
+Alexander~L. Strehl, Lihong Li, Eric Wiewiora, John Langford, and Michael~L.
+  Littman.
+\newblock Pac model-free reinforcement learning.
+\newblock In {\em Proceedings of the 23rd International Conference on Machine
+  Learning}, ICML '06, pages 881--888, New York, NY, USA, 2006. ACM.
+
+\bibitem{Strehl2008AnAO}
+Alexander~L. Strehl and Michael~L. Littman.
+\newblock An analysis of model-based interval estimation for markov decision
+  processes.
+\newblock {\em J. Comput. Syst. Sci.}, 74:1309--1331, 2008.
+
+\bibitem{Strens00abayesian}
+Malcolm Strens.
+\newblock A bayesian framework for reinforcement learning.
+\newblock In {\em In Proceedings of the Seventeenth International Conference on
+  Machine Learning}, pages 943--950. ICML, 2000.
+
+\bibitem{DBLP:journals/sigart/Sutton91}
+Richard~S. Sutton.
+\newblock Dyna, an integrated architecture for learning, planning, and
+  reacting.
+\newblock {\em {SIGART} Bulletin}, 2(4):160--163, 1991.
+
+\bibitem{Sutton:1998:IRL:551283}
+Richard~S. Sutton and Andrew~G. Barto.
+\newblock {\em Introduction to Reinforcement Learning}.
+\newblock MIT Press, Cambridge, MA, USA, 1st edition, 1998.
+
+\bibitem{Tesauro:1995:TDL:203330.203343}
+Gerald Tesauro.
+\newblock Temporal difference learning and td-gammon.
+\newblock {\em Commun. ACM}, 38(3):58--68, March 1995.
+
+\bibitem{Thrun92efficientexploration}
+Sebastian~B. Thrun.
+\newblock Efficient exploration in reinforcement learning.
+\newblock Technical report, 1992.
+
+\bibitem{Tsitsiklis97ananalysis}
+John~N. Tsitsiklis and Benjamin~Van Roy.
+\newblock An analysis of temporal-difference learning with function
+  approximation.
+\newblock Technical report, IEEE Transactions on Automatic Control, 1997.
+
+\bibitem{VanDenOord:2016:PRN:3045390.3045575}
+A\"{a}ron Van Den~Oord, Nal Kalchbrenner, and Koray Kavukcuoglu.
+\newblock Pixel recurrent neural networks.
+\newblock In {\em Proceedings of the 33rd International Conference on
+  International Conference on Machine Learning - Volume 48}, ICML'16, pages
+  1747--1756. JMLR.org, 2016.
+
+\bibitem{Watkins:89}
+C.~J. C.~H. Watkins.
+\newblock {\em Learning from Delayed Rewards}.
+\newblock PhD thesis, King's College, Oxford, 1989.
+
+\bibitem{articleWyatt1997}
+Jeremy Wyatt.
+\newblock Exploration and inference in learning from reinforcement.
+\newblock 12 1997.
+
+\end{thebibliography}

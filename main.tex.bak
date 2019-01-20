@@ -1,0 +1,107 @@
+\documentclass[11pt]{report}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{dsfont}
+\usepackage{bm}
+\graphicspath{ {images/} }
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{braket} % needed for \Set
+\usepackage{caption}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{appendix}
+\linespread{1.3}
+
+%%declarations
+\usepackage{xspace}                                                             
+\DeclareRobustCommand{\eg}{e.g.,\@\xspace}                                      
+\DeclareRobustCommand{\ie}{i.e.,\@\xspace}                                      
+\DeclareRobustCommand{\wrt}{w.r.t.\@\xspace}                                    
+\DeclareRobustCommand{\wp}{w.p.\@\xspace}
+\DeclareRobustCommand{\quotes}[1]{``#1''}
+\usepackage{dsfont}
+\usepackage{bm}
+\newcommand{\mathbr}[1]{\bm{\mathbf{#1}}}
+
+\usepackage{amsthm}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{ass}{Assumption}[section]
+\newtheorem{coroll}{Corollary}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{example}{Example}[section]
+
+\usepackage[english]{babel}
+\renewcommand{\captionfont}{\small}
+\newcommand{\ev}{\displaystyle \mathop{\mathbb{E}}}
+\newcommand{\Var}{\displaystyle \mathop{\mathbb{V}\mathrm{ar}}}
+\newcommand{\Cov}{\displaystyle \mathop{\mathbb{C}\mathrm{ov}}}
+\newcommand{\Bias}{\displaystyle \mathop{\mathbb{B}\mathrm{ias}}}
+
+\newcommand{\blankpage}{
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+}
+
+\pagenumbering{roman}
+\begin{document}
+\title{
+	Driving Exploration Through Particle Q-Distributions
+}
+\input{Cover}
+\blankpage
+\chapter*{Abstract}
+\input{abstract}
+\blankpage
+\chapter*{Estratto in Lingua Italiana}
+\input{estratto_italiano}
+\blankpage
+\chapter*{Acknowledgements}
+\input{acknowledgements}
+\blankpage
+\tableofcontents
+
+\listoffigures
+
+\listofalgorithms
+
+%\listofappendices
+
+\chapter{Introduction}
+\pagenumbering{arabic}
+\input{chapters/chapter01}
+\chapter{Reinforcement Learning and Markov Decision Processes} \label{chap:chapter2}
+\input{chapters/chapter02} 
+\chapter{State of The Art in Efficient Exploration} \label{chap:chapter3}
+\input{chapters/chapter03} 
+\chapter{Particle Q Learning} \label{chap:chapter4}
+\input{chapters/chapter04} 
+\chapter{Experiments}		\label{chap:chapter5}
+\input{chapters/chapter05} 
+\chapter{Conclusions}		\label{chap:chapter6}
+\input{chapters/chapter06} 
+\bibliographystyle{plain}
+\bibliography{sample}
+\appendix
+\chapter{Experiments With Double Agents}
+\input{appendixA}\label{app:appendixA}
+\end{document}
