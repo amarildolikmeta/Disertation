@@ -1,4 +1,4 @@
-Reinforcement Learning (RL) is an area of machine learning, closely tied to behavioral psychology, concerned with how agents should behave in their environment as to maximize some notion of utility function. Being inspired from psychology, we can say that this area is the closer to how humans and other beings learn.  The agent has to explore  environment, collecting data on its interactions and using them to make informed decisions in the future. In a way this process is similar to a baby exploring his surroundings and playing in a playground. The process is formalized in Figure \ref{fig:rl_framework}.\par
+Reinforcement Learning (RL) is an area of machine learning, closely tied to behavioral psychology, concerned with how agents should behave in their environment as to maximize some notion of utility function. Being inspired from psychology, we can say that this area is the closer to how humans and other beings learn.  The agent has to explore  its environment, collecting data on its interactions and using them to make informed decisions in the future. In a way this process is similar to a baby exploring his surroundings and playing in a playground. The process is formalized in Figure \ref{fig:rl_framework}.\par
 \begin{figure}
   \includegraphics[width=\linewidth]{RL.png}
   \caption{The Reinforcement Learning framework~\cite{Sutton:1998:IRL:551283}.}
@@ -283,7 +283,7 @@ Pseudocode of the Q learning algorithm is shown in Alg. \ref{alg:q-learning}.
 \begin{algorithm}[H]
 \begin{flushleft}
         \textbf{Input:} States $\mathcal{S} = \{1, \dots, n_s\}$, Actions $\mathcal{A} = \{1, \dots, n_a\}$, Reward function $R: \mathcal{S} \times \mathcal{A} \rightarrow \mathbb{R}$, Learning rate $\alpha \in [0, 1]$, Exploration rate $\epsilon \in [0, 1]$, Discount factor $\gamma \in [0, 1]$.\\
-        \textbf{Input:} $Q$ function
+        \textbf{Output:} $Q$ function
 \end{flushleft}
         \begin{algorithmic}
             \State Initialize $Q: \mathcal{S} \times \mathcal{A} \rightarrow \mathbb{R}$ arbitrarily
@@ -318,7 +318,7 @@ A fundamental issue at this point, is the \emph{bias-variance trade off}, closel
  \hat{\theta} = \argmin_{\theta \in \Theta} \Vert V^\pi - f_{\theta} \Vert_{q}.
  \label{eq:loss_function_func_approximator}
 \end{equation}
-We assume that function $f_\theta$ is constructed starting from a vector of \emph{features} $\phi = \phi_1 , \phi_2 , \ldots, \phi_p$ , \ie functions that map each state to real numbers $\phi(s)$ (or each state-action pair to real numbers $\phi(s, a)$). The functional form of $f_\theta$ can vary a lot: from linear models to complex non linear approximators, like neural networks.\par
+We assume that function $f_\theta$ is constructed starting from a vector of \emph{features} $\phi = \phi_1 , \phi_2 , \ldots,$ $\phi_p$ , \ie functions that map each state to real numbers $\phi(s)$ (or each state-action pair to real numbers $\phi(s, a)$). The functional form of $f_\theta$ can vary a lot: from linear models to complex non linear approximators, like neural networks.\par
 Under certain regularity conditions, prediction in this scenario can be carried out with \emph{gradient descent} methods employing as \emph{loss function} equation (\ref{eq:loss_function_func_approximator}) with $q=2$ and the unknown value function is replaced with the corresponding Monte Carlo or Temporal Difference estimator. The parameter update for approximate prediction is given by:
 \begin{equation}
 \theta^{(t+1)} \leftarrow \theta^{(t)} - \alpha^{(t)}(v^*_t - f_{\theta^{(t)}}(s_t,a_t)) \nabla_{\theta} f_{\theta^{(t)}}(s_t,a_t).

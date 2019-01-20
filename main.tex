@@ -55,23 +55,36 @@
 \newcommand{\Cov}{\displaystyle \mathop{\mathbb{C}\mathrm{ov}}}
 \newcommand{\Bias}{\displaystyle \mathop{\mathbb{B}\mathrm{ias}}}
 
+\newcommand{\blankpage}{
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+}
+
 \pagenumbering{roman}
 \begin{document}
 \title{
 	Driving Exploration Through Particle Q-Distributions
 }
 \input{Cover}
+\blankpage
 \chapter*{Abstract}
 \input{abstract}
-
+\blankpage
+\chapter*{Estratto in Lingua Italiana}
+\input{estratto_italiano}
+\blankpage
 \chapter*{Acknowledgements}
 \input{acknowledgements}
-
+\blankpage
 \tableofcontents
 
 \listoffigures
 
 \listofalgorithms
+
+%\listofappendices
 
 \chapter{Introduction}
 \pagenumbering{arabic}
